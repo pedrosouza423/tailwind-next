@@ -3,16 +3,17 @@ import { Logo } from './logo'
 import {
   BarChart,
   CheckSquare,
+  Cog,
   Flag,
   Home,
   LifeBuoy,
   Search,
-  Settings,
   SquareStack,
   Users,
 } from 'lucide-react'
 import { NavItem } from './NavItem'
 import { UsedSpaceWidget } from './UsedSpaceWidget'
+import { Profile } from './Profile'
 
 export const Sidebar = () => {
   return (
@@ -35,12 +36,14 @@ export const Sidebar = () => {
         <NavItem title="Users" icon={Users} />
       </nav>
 
-      <div className="mt-auto">
+      <div className="mt-auto flex flex-col gap-6">
         <nav className="space-y-0.5">
           <NavItem title="Suport" icon={LifeBuoy} />
-          <NavItem title="Settings" icon={Settings} />
+          <NavItem title="Settings" icon={Cog} />
         </nav>
         <UsedSpaceWidget />
+        <div className="h-px bg-zinc-200" />
+        <Profile />
       </div>
     </aside>
   )
