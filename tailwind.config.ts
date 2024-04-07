@@ -15,6 +15,23 @@ const config: Config = {
       colors: {
         violet: { 25: '#fcfaff' },
       },
+
+      keyframes: {
+        slideDownAndFade: {
+          from: { opacity: '0', transform: 'translateY(-2px)' },
+          to: { opacity: '1', transform: 'translateY(2px)' },
+        },
+        // slideUpAndFade: {
+        //   from: { opacity: '1' },
+        //   to: { opacity: '0' },
+        // },
+      },
+
+      animation: {
+        slideDownAndFade:
+          'slideDownAndFade 400ms cubic-bezier(0.16, 1 , 0.16, 1)',
+        // slideUpAndFade: 'slideUpAndFade 1s linear',
+      },
     },
   },
   plugins: [],
